@@ -1,11 +1,11 @@
 # clean_codex_accounts
 
-用于批量扫描 Codex 认证 JSON 文件，检测账号是否失效、配额是否超限，并自动清理或隔离异常账号文件。
+用于批量扫描 CPA 认证 JSON 文件，检测账号是否失效、配额是否超限，并自动清理或隔离异常账号文件。
 
 ## 功能
 
-- 扫描认证目录中的 Codex JSON 文件。
-- 向 Codex `/responses` 接口发送轻量探测请求。
+- 扫描认证目录中的 CPA JSON 文件。
+- 向 CPA `/responses` 接口发送轻量探测请求。
 - 识别以下状态：
   - `401 Unauthorized`：认证失效。
   - `usage_limit_reached` / quota exceeded：配额超限。
