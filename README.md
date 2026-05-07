@@ -1,4 +1,4 @@
-# clean_codex_accounts
+# cpa-cleaner
 
 用于批量扫描 CPA 认证 JSON 文件，检测账号是否失效、配额是否超限，并自动清理或隔离异常账号文件。
 
@@ -24,7 +24,7 @@
 ## 快速开始
 
 ```bash
-python clean_codex_accounts.py --once
+python cpa-cleaner.py --once
 ```
 
 默认会扫描：
@@ -44,7 +44,7 @@ python clean_codex_accounts.py --once
 ### 单次扫描
 
 ```bash
-python clean_codex_accounts.py --once
+python cpa-cleaner.py --once
 ```
 
 ### 定时扫描
@@ -52,49 +52,49 @@ python clean_codex_accounts.py --once
 不加 `--once` 时进入循环模式，默认每 15 分钟执行一次。
 
 ```bash
-python clean_codex_accounts.py
+python cpa-cleaner.py
 ```
 
 自定义间隔：
 
 ```bash
-python clean_codex_accounts.py --interval-minutes 10
+python cpa-cleaner.py --interval-minutes 10
 ```
 
 ### 指定认证目录
 
 ```bash
-python clean_codex_accounts.py --auth-dir ./auths --once
+python cpa-cleaner.py --auth-dir ./auths --once
 ```
 
 ### 调整并发数
 
 ```bash
-python clean_codex_accounts.py --workers 50 --once
+python cpa-cleaner.py --workers 50 --once
 ```
 
 ### 删除 401 前要求确认
 
 ```bash
-python clean_codex_accounts.py --confirm-delete-401 --once
+python cpa-cleaner.py --confirm-delete-401 --once
 ```
 
 ### 禁用自动删除 401
 
 ```bash
-python clean_codex_accounts.py --no-delete-401 --once
+python cpa-cleaner.py --no-delete-401 --once
 ```
 
 ### 禁用超限文件隔离
 
 ```bash
-python clean_codex_accounts.py --no-quarantine --once
+python cpa-cleaner.py --no-quarantine --once
 ```
 
 ### 刷新 token 后再检测
 
 ```bash
-python clean_codex_accounts.py --refresh-before-check --once
+python cpa-cleaner.py --refresh-before-check --once
 ```
 
 ### 输出 JSON
@@ -102,7 +102,7 @@ python clean_codex_accounts.py --refresh-before-check --once
 适合脚本、管道或监控系统消费。
 
 ```bash
-python clean_codex_accounts.py --output-json --once
+python cpa-cleaner.py --output-json --once
 ```
 
 ## 参数说明
@@ -153,7 +153,7 @@ python clean_codex_accounts.py --output-json --once
 示例：
 
 ```bash
-python clean_codex_accounts.py --output-json --once
+python cpa-cleaner.py --output-json --once
 ```
 
 ## 注意事项
